@@ -53,4 +53,90 @@
             transition: transform 0.3s ease;
         }
 
-        .mv-section img:
+        .mv-section img:hover {
+            transform: translateY(-3px);
+        }
+
+        /* メリット */
+        .merit-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 5%;
+            background: var(--bg-light);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .merit-card {
+            width: 30%;
+            min-width: 280px;
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .merit-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .merit-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .merit-card { width: 100%; }
+            .mv-section { padding: 20px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">エネチェンジでんき</div>
+</header>
+
+<section class="mv-section">
+    <a href="#">
+        <img src="./images/mv-banner.png" alt="お引越し先でもエネチェンジでんき 継続利用でエネポイント5,000円分プレゼント！お引越し手続きはこちら">
+    </a>
+</section>
+
+<section class="merit-container">
+    <div class="merit-card">
+        <i class="fas fa-bolt"></i>
+        <h3>手続きがカンタン</h3>
+        <p>マイページから新住所を入力するだけ。他社への新規申込みのような面倒な書類は一切不要です。</p>
+    </div>
+    <div class="merit-card">
+        <i class="fas fa-yen-sign"></i>
+        <h3>解約金0円</h3>
+        <p>継続利用なら解約金・違約金はかかりません。お引越し先でもそのままおトクなプランが適用されます。</p>
+    </div>
+    <div class="merit-card">
+        <i class="fas fa-gift"></i>
+        <h3>5,000pt還元</h3>
+        <p>他社に乗り換えるよりも実質おトク！3ヶ月間の継続利用で電気代に使えるポイントを付与します。</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 エネチェンジでんき 株式会社
+</footer>
+
+</body>
+</html>
