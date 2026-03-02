@@ -19,11 +19,11 @@
             padding: 0;
             color: #333;
             line-height: 1.5;
-            background-color: #fff; /* LINE内では清潔感のある白背景 */
+            background-color: #fff;
             -webkit-text-size-adjust: 100%;
         }
 
-        /* ヘッダー：LINE内ではシンプルに */
+        /* ヘッダー */
         header {
             background: #fff;
             padding: 12px 0;
@@ -40,11 +40,11 @@
             color: var(--primary-color);
         }
 
-        /* メインビジュアル：LINEの画面幅にピッタリ合わせる */
+        /* メインビジュアル */
         .mv-section {
             width: 100%;
             background-color: #fff;
-            padding: 0; /* 画像を画面端まで広げる */
+            padding: 0;
         }
 
         .mv-section img {
@@ -53,145 +53,6 @@
             display: block;
         }
 
-        /* LINEで最も重要なボタン */
+        /* メインCTA（継続手続きボタン） */
         .cta-container {
             padding: 20px 15px;
-            background: #fff;
-            text-align: center;
-        }
-
-        .cta-button {
-            display: block;
-            background: linear-gradient(to bottom, #ff9900, #ff6600);
-            color: #fff;
-            text-decoration: none;
-            padding: 18px 0;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
-            animation: pulse 2s infinite; /* ボタンを揺らして目立たせる */
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
-        /* メリットセクション：スマホでサクサク読めるように */
-        .merit-container {
-            padding: 30px 15px;
-            background: var(--bg-light);
-        }
-
-        .merit-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .merit-card i {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-right: 15px;
-            width: 40px;
-            text-align: center;
-        }
-
-        .merit-card-text h3 {
-            font-size: 1.05rem;
-            margin: 0 0 5px 0;
-            color: var(--secondary-color);
-        }
-
-        .merit-card-text p {
-            font-size: 0.85rem;
-            margin: 0;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 0.75rem;
-        }
-
-        /* PCで見ても崩れない調整 */
-        @media (min-width: 768px) {
-            .mv-section img {
-                max-width: 800px;
-                margin: 0 auto;
-                border-radius: 10px;
-                margin-top: 20px;
-            }
-            .cta-button {
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            .merit-container {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-            .merit-card {
-                flex-direction: column;
-                width: 250px;
-                text-align: center;
-            }
-            .merit-card i { margin: 0 0 15px 0; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="logo">ENECHANGE エネチェンジでんき</div>
-</header>
-
-<section class="mv-section">
-    <img src="images/mv-banner.png" alt="継続特典5,000ptプレゼント">
-</section>
-
-<section class="cta-container">
-    <a href="https://www.eneos-power.co.jp/denki/contract/moving.html" class="cta-button">
-        5,000pt特典を受けて<br>お引越し手続きをする
-    </a>
-    <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">※手続きはWEBで5分、ログインが必要です</p>
-</section>
-
-<section class="merit-container">
-    <div class="merit-card">
-        <i class="fas fa-check-circle"></i>
-        <div class="merit-card-text">
-            <h3>WEBで完結</h3>
-            <p>今の契約を引き継ぐから、住所入力だけでOK。</p>
-        </div>
-    </div>
-    <div class="merit-card">
-        <i class="fas fa-check-circle"></i>
-        <div class="merit-card-text">
-            <h3>解約金0円</h3>
-            <p>継続利用なら、お引越し先でも費用はかかりません。</p>
-        </div>
-    </div>
-    <div class="merit-card">
-        <i class="fas fa-check-circle"></i>
-        <div class="merit-card-text">
-            <h3>5,000pt還元</h3>
-            <p>他社よりおトク。3ヶ月継続で全員もらえます。</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    &copy; 2026 エネチェンジでんき 株式会社
-</footer>
-
-</body>
-</html>
