@@ -10,7 +10,7 @@
             --primary-color: #ff6600;
             --secondary-color: #004494;
             --accent-color: #ff3300;
-            --bg-light: #f9f9f9;
+            --bg-light: #f4f7f9;
         }
 
         body {
@@ -20,123 +20,56 @@
             color: #333;
             line-height: 1.6;
             background-color: var(--bg-light);
+            word-break: break-all;
         }
 
+        /* ヘッダーの最適化 */
         header {
             background: #fff;
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* スマホでは中央寄せ */
             align-items: center;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             color: var(--primary-color);
+            letter-spacing: 1px;
         }
 
-        /* メインビジュアル（画像配置用） */
+        /* メインビジュアルの最適化 */
         .mv-section {
             text-align: center;
-            padding: 40px 5%;
+            padding: 20px 15px;
             background-color: #fff;
+        }
+
+        .mv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
         }
 
         .mv-section img {
             width: 100%;
-            max-width: 1000px;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: block; /* 下の隙間を消す */
         }
 
-        .mv-section img:hover {
-            transform: translateY(-3px);
-        }
-
-        /* メリット */
+        /* メリットセクションの最適化（グリッドレイアウト） */
         .merit-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 50px 5%;
-            background: var(--bg-light);
-            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+            max-width: 1100px;
             margin: 0 auto;
         }
-
-        .merit-card {
-            width: 30%;
-            min-width: 280px;
-            text-align: center;
-            padding: 30px 20px;
-            margin-bottom: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .merit-card i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .merit-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .merit-card { width: 100%; }
-            .mv-section { padding: 20px 5%; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="logo">エネチェンジでんき</div>
-</header>
-
-<section class="mv-section">
-    <a href="#">
-        <img src="./images/mv-banner.png" alt="お引越し先でもエネチェンジでんき 継続利用でエネポイント5,000円分プレゼント！お引越し手続きはこちら">
-    </a>
-</section>
-
-<section class="merit-container">
-    <div class="merit-card">
-        <i class="fas fa-bolt"></i>
-        <h3>手続きがカンタン</h3>
-        <p>マイページから新住所を入力するだけ。他社への新規申込みのような面倒な書類は一切不要です。</p>
-    </div>
-    <div class="merit-card">
-        <i class="fas fa-yen-sign"></i>
-        <h3>解約金0円</h3>
-        <p>継続利用なら解約金・違約金はかかりません。お引越し先でもそのままおトクなプランが適用されます。</p>
-    </div>
-    <div class="merit-card">
-        <i class="fas fa-gift"></i>
-        <h3>5,000pt還元</h3>
-        <p>他社に乗り換えるよりも実質おトク！3ヶ月間の継続利用で電気代に使えるポイントを付与します。</p>
-    </div>
-</section>
-
-<footer>
-    &copy; 2026 エネチェンジでんき 株式会社
-</footer>
-
-</body>
-</html>
